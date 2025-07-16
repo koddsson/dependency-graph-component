@@ -4,10 +4,28 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "web-dev-server --node-resolve --esbuild-target=auto --watch",
+    "lint": "eslint .",
+    "build": "rollup --config rollup.config.js"
   },
   "keywords": [],
   "author": "Kristján Oddsson <hi@koddsson.com>",
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@koddsson/eslint-config": "^2.0.0",
+    "d3": "^7.9.0",
+    "d3-arrow": "^0.0.25",
+    "d3-force-reuse": "^1.0.1",
+    "eslint": "^9.31.0",
+    "rollup": "^4.45.1",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@web/dev-server": "^0.4.6",
+    "@web/dev-server-esbuild": "^1.0.4",
+    "@web/rollup-plugin-html": "^2.3.0",
+    "rollup-plugin-esbuild": "^6.2.1"
+  }
 }
